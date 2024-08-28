@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +17,47 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val rvList = findViewById<RecyclerView>(R.id.rv_list)
     }
 }
+
+val contacts = listOf(
+    Contact(
+        name = "Diogo",
+        phone = "(351) 911168464",
+        icon = R.drawable.sample2
+    ),Contact(
+        name = "Rita",
+        phone = "(351) 963852741",
+        icon = R.drawable.sample1
+    ),Contact(
+        name = "Duarte",
+        phone = "(351) 961472583",
+        icon = R.drawable.sample8
+    ),Contact(
+        name = "Vasco",
+        phone = "(351) 915753258",
+        icon = R.drawable.sample9
+    ),Contact(
+        name = "Francisco",
+        phone = "(351) 968543217",
+        icon = R.drawable.sample10
+    ),Contact(
+        name = "Maria",
+        phone = "(351) 914785236",
+        icon = R.drawable.sample3
+    ),Contact(
+        name = "Sofia",
+        phone = "(351) 961236547",
+        icon = R.drawable.sample4
+    ),Contact(
+        name = "Ines",
+        phone = "(351) 937126842",
+        icon = R.drawable.sample5
+    ),Contact(
+        name = "Leonor ",
+        phone = "(351) 91856324",
+        icon = R.drawable.sample16
+    )
+)
