@@ -9,23 +9,24 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
-
+// Adaptação/Conecção entre o data class definido em Contact.kt e o item_list.xml
 class ContactListAdapter: ListAdapter<Contact, ContactListAdapter.ContactViewHolder>(ContactDiffUtils()) {
+// Criação do ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent  , false)
         return ContactViewHolder(view)
     }
-
+// bind - interligar os campos da item_list.xml com a UI view
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-
+// ViewHolder = está a segurar os dados
     class ContactViewHolder(view: View) : RecyclerView.ViewHolder(view){
         private val tvName = view.findViewById<TextView>(R.id.tv_name)
         private val tvPhone = view.findViewById<TextView>(R.id.tv_phone)
         private val image = view.findViewById<ImageView>(R.id.image)
 
-
+//
         fun bind (contact: Contact) {
             tvName.text = contact.name
             tvPhone.text = contact.phone
