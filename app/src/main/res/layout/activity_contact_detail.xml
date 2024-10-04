@@ -27,7 +27,7 @@
         tools:text="Name" />
 
     <TextView
-        android:id="@+id/rv_detail_phone"
+        android:id="@+id/tv_detail_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,21 +43,22 @@
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/baseline_phone_enabled_24"
-        android:tint="@android:color/holo_green_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/rv_detail_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_phone"
+        app:tint="@android:color/holo_green_dark" />
 
     <ImageView
         android:id="@+id/iv_detail_message"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/message"
+        android:src="@drawable/baseline_auto_delete_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_detail_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_phone"
+        app:tint="@android:color/holo_red_dark" />
 
     <TextView
         android:id="@+id/tv_detail_contactSettings"
@@ -71,10 +72,12 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_detail_message" />
 
     <TextView
+        android:id="@+id/tv_detail_shareContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share Contact"
         android:layout_margin="16dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_detail_contactSettings" />
 

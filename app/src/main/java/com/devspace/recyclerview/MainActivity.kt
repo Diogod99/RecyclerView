@@ -1,5 +1,6 @@
 package com.devspace.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -41,8 +42,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter.clickLocation { contact ->
-            Log.d("Roque", contact.toString())
-
+            val intent = Intent(this, ContactDetailActivity::class.java)
+            intent.putExtra("name", contact.name)
+            intent.putExtra("phone", contact.phone)
+            intent.putExtra("icon", contact.icon)
+            startActivity(intent)
         }
 
     }
